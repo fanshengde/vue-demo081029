@@ -1,14 +1,4 @@
 <template>
-  <div>
-    <el-tooltip effect="dark" placement="bottom">
-      <div slot="content">
-        <a class="link" :href="url" target="_blank">转到 Github</a>
-      </div>
-      <el-button class="btn-text can-hover" type="text" @click="handleClick">
-        <nx-icon name="github" style="font-size: 20px"/>
-      </el-button>
-    </el-tooltip>
-  </div>
 </template>
 
 <script>

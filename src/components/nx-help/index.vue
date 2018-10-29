@@ -5,21 +5,7 @@
         <nx-icon name="question-circle"/>
       </el-button>
     </el-tooltip>
-    <el-dialog title="帮助" width="700px" :visible.sync="dialogVisible" append-to-body>
-      <div style="margin-top: -25px;">
-        <h1 >如果你有问题可以加入交流群或者联系作者</h1>
-        <el-row :gutter="20">
-          <el-col :span="12">
-            <el-alert :closable="false" type="info" title="扫码进 QQ 群"/>
-            <img class="qr" src="../../../static/img/me/qq.jpg">
-          </el-col>
-          <el-col :span="12">
-            <el-alert :closable="false" type="info" title="作者微信 加好友拉进微信群" />
-            <img class="qr" src="../../../static/img/me/we.jpg">
-          </el-col>
-        </el-row>
-      </div>
-    </el-dialog>
+
   </div>
 </template>
 
