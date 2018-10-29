@@ -6,16 +6,10 @@
 
     <div class="right-menu">
 
-      <nx-github style="margin-top:2px" class="nx-help right-menu-item"></nx-github>
-      <!-- <error-log class="errLog-container right-menu-item"></error-log> -->
-      <nx-help class="nx-help right-menu-item" />
-      
-     
-
       <!-- <lang-select class="international right-menu-item"></lang-select> -->
       <nx-lang-select class="international right-menu-item"></nx-lang-select>
 
-      
+
 
       <el-dropdown class="avatar-container right-menu-item" trigger="click">
         <div class="avatar-wrapper">
@@ -28,11 +22,6 @@
               home
             </el-dropdown-item>
           </router-link>
-          <a target='_blank' href="https://github.com/mgbq/nxAdmin-template/">
-            <el-dropdown-item>
-              github地址
-            </el-dropdown-item>
-          </a>
           <el-dropdown-item divided>
             <span @click="logout" style="display:block;">退出</span>
           </el-dropdown-item>
