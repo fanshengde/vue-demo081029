@@ -19,9 +19,6 @@
           <el-tab-pane label="用户密码" name="user">
             <userLogin></userLogin>
           </el-tab-pane>
-          <el-tab-pane label="短信验证码" name="code">
-            <codeLogin></codeLogin>
-          </el-tab-pane>
         </el-tabs>
       </div>
     </div>
@@ -30,13 +27,11 @@
 </template>
 <script>
 import userLogin from './userlogin'
-import codeLogin from './codelogin'
 import { mapGetters } from 'vuex'
 export default {
   name: 'login',
   components: {
-    userLogin,
-    codeLogin
+    userLogin
   },
   data() {
     return {

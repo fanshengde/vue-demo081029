@@ -1,15 +1,21 @@
 export default {
-  title: 'nx-admin',
+  title: 'ITSM',
   logo: 'N',
-  author: 'BY nxmin',
+  author: 'BY CASIC',
   whiteList: ['/login', '/404', '/401', '/lock'],
   lockPage: '/lock',
   info: {
     title: 'nx-admin',
     list: [
-      'nxAdmin-template 是一个基于XXXX工程可视化管理平台，采用token交互验证方式。',
-      '您可以 nxAdmin-template 为基础，不只限制于vue的页面，你可以嵌入任意第三方网站，基于iframe框架。',
-      'nxAdmin-template 构建简单上手快，最大程度上帮助企业节省时间成本和费用开支。'
+      '统一IT管理。',
+      '网络性能监控。',
+      '应用性能管理。',
+      '网络配置管理。',
+      '服务器性能监控。',
+      '存储设备监控。',
+      '业务服务管理。',
+      'IT资产管理。',
+      '可视化管理。'
     ]
   },
   wel: {
