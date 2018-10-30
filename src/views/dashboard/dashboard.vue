@@ -23,18 +23,18 @@
 <script>
 
 import nxDataDisplay from '@/components/nx-data-display/nx-data-display'
-// import nxDataCard from '@/components/nx-data-card/nx-data-card'
+import nxDataCard from '@/components/nx-data-card/nx-data-card'
 import nxDataTabs from '@/components/nx-data-tabs/nx-data-tabs'
 import nxDataIcons from '@/components/nx-data-icons/nx-data-icons'
-// import nxGithubCorner from '@/components/nx-github-corner'
+import nxGithubCorner from '@/components/nx-github-corner'
 export default {
   name: 'report',
   components: {
     nxDataDisplay,
-    // nxDataCard,
+    nxDataCard,
     nxDataTabs,
     nxDataIcons,
-    // nxGithubCorner
+    nxGithubCorner
 
   },
   data() {
