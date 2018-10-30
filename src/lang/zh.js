@@ -39,7 +39,7 @@ export default {
     radarCharts: '雷达图',
     vueActual: 'vue实战',
     from: '表单',
-    BaseForm: 'from表单',
+    BaseForm: 'form表单',
     VueEditor: '文本编辑',
     Upload: '文件上传',
     Components: '组件',
