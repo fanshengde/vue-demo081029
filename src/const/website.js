@@ -5,7 +5,7 @@ export default {
   whiteList: ['/login', '/404', '/401', '/lock'],
   lockPage: '/lock',
   info: {
-    title: 'nx-admin',
+    title: 'ITSM',
     list: [
       '统一IT管理。',
       '网络性能监控。',
