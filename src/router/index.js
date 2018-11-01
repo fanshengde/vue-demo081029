@@ -74,7 +74,7 @@ export const asyncRouterMap = [
     },
     children: [{
       path: 'page',
-      component: () => import('@/views/permission/page'),
+      component: () => import('./../views/permission/page'),
       name: 'pagePermission',
       meta: {
         title: 'pagePermission',
@@ -82,7 +82,7 @@ export const asyncRouterMap = [
       }
     }, {
       path: 'directive',
-      component: () => import('@/views/permission/directive'),
+      component: () => import('./../views/permission/directive'),
       name: 'directivePermission',
       meta: {
         title: 'directivePermission'
@@ -100,23 +100,27 @@ export const asyncRouterMap = [
     meta: {
       title: 'Table',
       icon: 'table',
-      roles: ['admin', 'editor']
+      roles: ['admin', 'editor'],
+      permission: ['admin']
     },
     children: [
       {
         path: 'complex-table',
         name: 'complex-table',
-        component: () => import('@/views/table/complex-table'),
+        component: () => import('./../views/table/complex-table'),
         meta: {
           title: 'complexTable',
-          roles: ['admin']
+          roles: ['admin', 'editor']
         }
       },
       {
         path: 'TreeTable',
         name: 'TreeTable',
-        component: () => import('@/views/table/tree-table/index'),
-        meta: { title: 'treeTable' }
+        component: () => import('./../views/table/tree-table/index'),
+        meta: {
+          title: 'treeTable',
+          roles: ['admin']
+        }
       }
     ]
   },
