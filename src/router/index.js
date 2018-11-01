@@ -52,12 +52,7 @@ export const constantRouterMap = [
         meta: { title: 'dashboard', icon: 'dashboard' }
       }
     ]
-  },
-
-
-
-
-
+  }
 ]
 
 export default new Router({
