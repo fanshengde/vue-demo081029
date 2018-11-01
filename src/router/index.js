@@ -54,63 +54,9 @@ export const constantRouterMap = [
     ]
   },
 
-  // 表单
-  {
-    path: '/form',
-    component: Layout,
-    redirect: '/table/BaseForm',
-    name: 'form',
-    meta: {
-      title: 'form',
-      icon: 'form'
-    },
-    children: [
-      {
-        path: 'BaseForm',
-        name: 'BaseForm',
-        component: () => import('@/views/form/BaseForm'),
-        meta: { title: 'BaseForm' }
-      },
-      {
-        path: 'VueEditor',
-        name: 'VueEditor',
-        component: () => import('@/views/form/VueEditor'),
-        meta: { title: 'VueEditor' }
-      },
-      {
-        path: 'Upload',
-        name: 'Upload',
-        component: () => import('@/views/form/Upload'),
-        meta: { title: 'Upload' }
-      }
-    ]
-  },
 
-  // 表格
-  {
-    path: '/table',
-    component: Layout,
-    redirect: '/table/complex-table',
-    name: 'table',
-    meta: {
-      title: 'Table',
-      icon: 'table'
-    },
-    children: [
-      {
-        path: 'complex-table',
-        name: 'complex-table',
-        component: () => import('@/views/table/complex-table'),
-        meta: { title: 'complexTable' }
-      },
-      {
-        path: 'TreeTable',
-        name: 'TreeTable',
-        component: () => import('@/views/table/tree-table/index'),
-        meta: { title: 'treeTable' }
-      }
-    ]
-  }
+
+
 
 ]
 
@@ -148,6 +94,73 @@ export const asyncRouterMap = [
         // if do not set roles, means: this page does not require permission
       }
     }]
+  },
+  // 表格
+  {
+    path: '/table',
+    component: Layout,
+    redirect: '/table/complex-table',
+    name: 'table',
+    alwaysShow: true,
+    meta: {
+      title: 'Table',
+      icon: 'table',
+      roles: ['admin', 'editor']
+    },
+    children: [
+      {
+        path: 'complex-table',
+        name: 'complex-table',
+        component: () => import('@/views/table/complex-table'),
+        meta: {
+          title: 'complexTable',
+          roles: ['admin']
+        }
+      },
+      {
+        path: 'TreeTable',
+        name: 'TreeTable',
+        component: () => import('@/views/table/tree-table/index'),
+        meta: { title: 'treeTable' }
+      }
+    ]
+  },
+  // 表单
+  {
+    path: '/form',
+    component: Layout,
+    redirect: '/table/BaseForm',
+    name: 'form',
+    meta: {
+      title: 'form',
+      icon: 'form'
+    },
+    children: [
+      {
+        path: 'BaseForm',
+        name: 'BaseForm',
+        component: () => import('@/views/form/BaseForm'),
+        meta: {
+          title: 'BaseForm',
+          roles: ['admin', 'editor']
+        }
+      },
+      {
+        path: 'VueEditor',
+        name: 'VueEditor',
+        component: () => import('@/views/form/VueEditor'),
+        meta: {
+          title: 'VueEditor',
+          roles: ['admin']
+        }
+      },
+      {
+        path: 'Upload',
+        name: 'Upload',
+        component: () => import('@/views/form/Upload'),
+        meta: { title: 'Upload' }
+      }
+    ]
   },
   {
     path: '/error',
