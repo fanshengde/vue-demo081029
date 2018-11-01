@@ -10,7 +10,7 @@
 					<el-button type="primary" v-on:click="getUsers">查询</el-button>
 				</el-form-item>
 				<el-form-item>
-					<el-button type="primary" @click="handleAdd">新增</el-button>
+					<el-button v-permission="['admin']" type="primary" @click="handleAdd">新增</el-button>
 				</el-form-item>
 			</el-form>
 		</el-col>
@@ -78,7 +78,9 @@
 </template>
 
 <script>
-import util from '@/utils/table.js'
+import util from './../../utils/table.js'
+import permission from './../../directive/permission/index.js' // 权限判断指令
+
 import {
   getUserListPage,
   removeUser,
@@ -88,6 +90,7 @@ import {
 } from '@/api/userTable'
 
 export default {
+  directives: { permission },
   data() {
     return {
       dialogStatus: '',
