@@ -61,6 +61,53 @@ export default new Router({
   routes: constantRouterMap
 })
 export const asyncRouterMap = [
+  // 系统管理
+  {
+    path: '/sysManagement',
+    component: Layout,
+    redirect: '/',
+    name: 'sysManagement',
+    alwaysShow: true,
+    meta: {
+      title: 'sysManagement',
+      icon: 'lock'
+    },
+    children: [
+      {
+        path: 'sysUser',
+        component: () => import('./../views/sysManagement/sysUser'),
+        name: 'sysUser',
+        meta: {
+          title: 'sysUser'
+        }
+      },
+      {
+        path: 'sysRole',
+        component: () => import('./../views/sysManagement/sysRole'),
+        name: 'sysRole',
+        meta: {
+          title: 'sysRole'
+        }
+      },
+      {
+        path: 'sysPermission',
+        component: () => import('./../views/sysManagement/sysPermission'),
+        name: 'sysPermission',
+        meta: {
+          title: 'sysPermission'
+        }
+      },
+      {
+        path: 'sysDept',
+        component: () => import('./../views/sysManagement/sysDept'),
+        name: 'sysDept',
+        meta: {
+          title: 'sysDept'
+        }
+      }
+    ]
+  },
+  // 权限测试页
   {
     path: '/permission',
     component: Layout,
@@ -158,6 +205,25 @@ export const asyncRouterMap = [
         name: 'Upload',
         component: () => import('@/views/form/Upload'),
         meta: { title: 'Upload' }
+      }
+    ]
+  },
+  // 实战
+  {
+    path: '/vueActual',
+    component: Layout,
+    redirect: '/vueActual/Pos',
+    name: 'vueActual',
+    meta: {
+      title: 'vueActual',
+      icon: 'shizhan'
+    },
+    children: [
+      {
+        path: 'Pos',
+        name: 'Pos',
+        component: () => import('@/views/vueActual/Pos'),
+        meta: { title: 'vueActual', icon: 'shizhan' }
       }
     ]
   },

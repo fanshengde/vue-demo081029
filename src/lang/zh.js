@@ -80,7 +80,12 @@ export default {
     HightLightinViewer: '代码高亮显示',
     Rollingpositioning: '滚动定位',
     Digitalanimation: '数字动画',
-    list: 'list'
+    list: 'list',
+    sysManagement: '系统管理',
+    sysUser: '用户管理',
+    sysRole: '角色管理',
+    sysPermission: '权限管理',
+    sysDept: '部门管理'
   },
   permission: {
     roles: '你的权限',
