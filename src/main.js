@@ -1,4 +1,6 @@
 import Vue from 'vue'
+import axios from 'axios'
+import Vueaxios from 'vue-axios'
 
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
@@ -49,6 +51,8 @@ Vue.use(ElementUI, {
   size: 'medium', // set element-ui default size
   i18n: (key, value) => i18n.t(key, value)
 })
+
+Vue.use(Vueaxios, axios)
 
 Vue.config.productionTip = false
 
