@@ -22,6 +22,7 @@ import Layout from '../views/layout/Layout'
     icon: 'svg-name'             the icon show in the sidebar,
   }
 **/
+// 代表那些不需要动态判断权限的路由，如登录页、404、等通用页面。
 export const constantRouterMap = [
   // {
   //   path: '/',
@@ -60,6 +61,7 @@ export default new Router({
   scrollBehavior: () => ({ y: 0 }),
   routes: constantRouterMap
 })
+// 代表那些需求动态判断权限并通过 addRouters 动态添加的页面。
 export const asyncRouterMap = [
   // 系统管理
   {
@@ -227,6 +229,7 @@ export const asyncRouterMap = [
       }
     ]
   },
+  //  如果这里有一个需要非常注意的地方就是 404 页面一定要最后加载，如果放在 constantRouterMap 一同声明了 404 ，后面的所以页面都会被拦截到404
   {
     path: '/error',
     component: Layout,
